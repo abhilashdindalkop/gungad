@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<!--	Author : Abhilash Dindalkop -->
+
+<head>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+
+	<title>Gungad</title>
+
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link href="css/game.css" rel="stylesheet" type="text/css" />
+	<link href="css/main.css" rel="stylesheet" type="text/css" />
+
+	<!--	CROP -->
+	<link rel="stylesheet" href="crop/croppr.css">
+	<link rel="stylesheet" href="crop/crop.css">
+	<script src="crop/croppr.js"></script>
+	<script src="crop/crop.js"></script>
+
+</head>
+
+<body>
+
+	<div class="main_page row">
+		<div class="column col-left">
+			<div class="score_div">
+				<label> Best Score</label>
+				<table>
+					<tr>
+						<td>Name</td>
+						<td class="best_score_name"></td>
+					</tr>
+					<tr>
+						<td>Score</td>
+						<td class="best_score_value"></td>
+					</tr>
+				</table>
+			</div>
+			<img class="mosquito_anim" src="images/home/mosq-anim.gif">
+
+			<!--Image Crop Begin-->
+			<div class="image_crop_div">
+
+				<div class="mosquito_face_display">
+					<canvas class="mosquito_face"></canvas>
+				</div>
+
+				<p class="custom_mosquito_desc">Create a custom mosquito by uploading the image of your friend's face. Don't forget to enter your name because highest scorer will be listed on the top left board!</p>
+
+				<div class="mosquito_face_cropper"></div>
+
+				<div class="file_div">
+
+					<label class="upload_file_custom"> Choose an Image
+					<input type="file" id="face_img_upload" class="inputfile" size="60" >
+					</label>
+				</div>
+
+			</div>
+			<!--Image Crop End-->
+
+		</div>
+		<div class="column col-right">
+			<div class="game_title"> <span class="title_span">Gungad</span>
+				<div class="popup" onclick="popup()">Info
+					<span class="popuptext" id="popup_info">A mosquito fun game - Hit and Score. Add custom image of your favorite person face to make them a mosquito! ;) </span>
+				</div>
+			</div>
+
+			<div class="game_score"> Your score was <span class="score_value"></span></div>
+			<div class="user_name_div"> <input type="text" class="user_name" placeholder="My Name"></div>
+
+			<div class="start_game" onclick="startgame()"> Start </div>
+
+		</div>
+	</div>
+
+	<div class="game_page">
+		<div class="health_div">
+			<div class="health_label">Health</div>
+			<div class="health_progress">
+				<div class="health_bar"></div>
+			</div>
+		</div>
+
+		<div class="my_score_div">
+			<label>Score :</label><span class="my_score">0</span>
+		</div>
+
+		<div id="game_area" class="game_area" onclick="hitSwatter()">
+
+		</div>
+	</div>
+
+	<!--    FIRESTORE-->
+	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+
+	<!--    JS imports -->
+	<script src="js/constant.js" type="text/javascript"></script>
+	<script src="js/utils.js" type="text/javascript"></script>
+	<script src="js/game.js" type="text/javascript"></script>
+	<script src="js/database.js" type="text/javascript"></script>
+
+</body>
+
+</html>

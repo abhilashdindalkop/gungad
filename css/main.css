@@ -1,0 +1,197 @@
+.column {
+	float: left;
+	width: 50%;
+	height: 98vh;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.col-left {
+	background-color: #ffe329;
+	text-align: center;
+}
+
+.col-left .mosquito_anim {
+	width: 30%;
+	height: auto;
+	user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	float: right;
+}
+
+
+/*Game Title*/
+
+.game_title {
+	position: relative;
+	top: 15%;
+	text-align: center;
+}
+
+.game_title .title_span {
+	font-size: 5vmax;
+}
+
+.game_score {
+	position: relative;
+	top: 42%;
+	text-align: center;
+	font-size: 2vmax;
+	color: #555;
+}
+
+
+/*Button Design*/
+
+.start_game {
+	width: 12vmax;
+	height: 12vmax;
+	background-color: #07aab3;
+	border-radius: 5%;
+	box-shadow: 0 2px 5px 0 #666;
+	transition: all 0.15s ease-in-out;
+	font-size: 2.5vmax;
+	color: #fff;
+	text-align: center;
+	line-height: 12vmax;
+	margin: 0 auto;
+	cursor: pointer;
+	position: relative;
+	top: 40%;
+}
+
+.start_game:hover {
+	box-shadow: 0 3px 5px 0 #666;
+	transform: scale(1.01);
+}
+
+
+/*Name*/
+
+.user_name_div {
+	width: 100%;
+	position: relative;
+	top: 30%;
+	text-align: center;
+}
+
+.user_name {
+	display: block;
+	margin: 0 auto;
+	width: 30%;
+	padding: 1vmax 2vmax;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 1.4vmax;
+}
+
+
+/* Pop Up */
+
+.popup {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-size: 2vmin;
+}
+
+
+/* The actual popup */
+
+.popup .popuptext {
+	visibility: hidden;
+	width: 160px;
+	background-color: #777;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 8px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -80px;
+}
+
+
+/* Popup arrow */
+
+.popup .popuptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+}
+
+
+/* Toggle this class - hide and show the popup */
+
+.popup .show {
+	visibility: visible;
+	-webkit-animation: fadeIn 1s;
+	animation: fadeIn 1s;
+}
+
+
+/* Add animation (fade in the popup) */
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+
+/*Best Score Div*/
+
+.score_div {
+	position: absolute;
+	width: 25%;
+	font-size: 1.5vmax;
+	color: #555;
+	padding: 10px;
+	text-align: center;
+}
+
+.score_div table {
+	width: 100%;
+	margin: 0 auto;
+	color: #555;
+}
+
+.score_div table td {
+	padding: 3px;
+	width: 100px;
+	border: 1px solid #888;
+}

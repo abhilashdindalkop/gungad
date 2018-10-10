@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+body {
+	font-family: 'Inconsolata', monospace;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+
+/*Game Area*/
+
+div#game_area {
+	height: 100vh;
+	width: auto;
+	/*    background: url(../images/game-bg.jpg);*/
+}
+
+img.insect {
+	width: 12vh;
+	height: auto;
+	position: fixed;
+	/* Selectable  false*/
+	user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+img.bonus_object {
+	width: 50px;
+	height: auto;
+	position: fixed;
+}
+
+.blood {
+	position: absolute;
+	width: 50px;
+	/* Selectable  false*/
+	user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+
+/*Score Board*/
+
+.my_score_div {
+	position: absolute;
+	top: 20px;
+	right: 50px;
+	color: #666;
+	font-size: 20px;
+}
+
+.my_score_div label {
+	margin-right: 10px
+}
+
+
+/*Health*/
+
+.health_div {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 30%;
+	opacity: 0.8;
+}
+
+.health_label {
+	font-size: 2.2vh;
+	color: #000;
+	margin: 2px;
+}
+
+.health_progress {
+	background: #ddd;
+	border-radius: 50px;
+}
+
+.health_bar {
+	border-radius: 50px;
+	height: 6px;
+	background-color: #07aab3;
+	-webkit-transition: width 1s;
+	transition: width 1s;
+}
