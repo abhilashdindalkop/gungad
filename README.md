@@ -1,5 +1,5 @@
 # Gungad
-Small web game to hit mosquitos and upload your favorite person's photo making him/her a mosquito
+Web Fun Game to hit mosquitos and upload your favorite person's photo making him/her a mosquito
 
 
 ## Setting up database for game high score
